@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/main.ts"
+    "start": "export $(cat .env | xargs) && node dist/main.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "web3": "^4.9.0"
+    "web3": "^4.9.0",
+    "winston": "^3.13.0"
   }
 }
